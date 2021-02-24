@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "munchkin/v1/user.proto";
+import "munchkin/v1/card.proto";
+
+enum Occupation {
+    Vagrant = 0; // 无业游民
+    Warrior = 1; // 战士
+    Mage    = 2; // 法师
+    Rouge   = 3; // 盗贼
+    Priest  = 4; // 牧师
+}
+
+enum Race {
+    Human = 0;
+    Elf = 1; // 精灵
+    Dwarf = 2; // 矮人
+    Halfling = 3; // 半身人
+}
+
+enum Gender {
+    A = 0;
+    B = 1;
+}
+
+message Player {
+    string     user_name  = 1; // pf
+    Occupation occupation = 2; //
+    Race       race       = 3; //
+    Gender     gender     = 4; //
+
+    repeated Card hands = 5; // 手牌
+}

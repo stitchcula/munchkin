@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+enum CardType {
+    monster    = 0; // 怪物
+    occupation = 1; // 职业
+    curse      = 2; // 诅咒
+    race       = 3; // 种族
+    treasure   = 4; // 宝藏
+}
+
+message Card {
+    string   name        = 1;
+    string   description = 2;
+    CardType type        = 3; // maybe []CardType?
+    // ... else
+}

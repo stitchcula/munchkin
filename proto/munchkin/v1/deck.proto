@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "munchkin/v1/card.proto";
+
+message Cards {
+    Card  card = 1;
+    int32 num  = 2;
+}
+
+message Deck {
+    string         name        = 1;
+    string         description = 2;
+    repeated Cards cards       = 3;
+}
